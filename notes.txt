@@ -4,3 +4,9 @@ TASK LIST:
 - add box color when pressed 
 - check active preview 
 - fix phone version 
+
+
+
+git add --all
+git commit -m "intro-form"
+git push u- origin main
