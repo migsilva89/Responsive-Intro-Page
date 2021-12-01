@@ -26,54 +26,54 @@
             </p>
           </h1>
          <!-- DIREITA COLUNA  -->
-          <div class="flex items-center justify-center p-8 sm:p-8 md:w-1/2">
+          <div class="flex items-center  justify-center p-8 sm:p-8 md:w-1/2">
             <div class="max-w-full">
-              <h1 class="bg-bluep-500 rounded-lg block w-full px-4 py-4 mt-4 mb-4 text-base font-extrabold text-center text-white">
-                Try it free 7 days <span class="font-light">then $20/mo. thereafter</span>
+              <h1 class="bg-bluep-500 shadow-xl rounded-lg block w-full px-4 py-4 mt-4 mb-4 text-base font-black text-center text-white">
+                Try it free 7 days <span class="font-thin">then $20/mo. thereafter</span>
               </h1>
               <!-- PRIMEIRA CAIXA -->
-              <div class="bg-white rounded-lg block w-full px-4 py-2 sm:p-8 mt-4 mb-4">
+              <div class="bg-white shadow-xl rounded-lg block w-full px-4 py-2 sm:p-8 mt-4 mb-4">
               <div>
                 <label class="block text-sm"></label>
                 <input type="text"
-                  class="w-full px-4 leading-8  py-2 text-sm border rounded-md focus:border-indigo-600 focus:outline-none focus:ring-1 focus:ring-blue-600"
+                  class="w-full px-4 leading-8  py-2 text-sm border rounded-md focus:border-bluep-500 focus:outline-none focus:ring-1 focus:ring-bluep-500"
                   placeholder="Name" />
               </div>
             <!-- SEGUNDA CAIXA -->
               <div class="mt-4">
                 <label class="block text-sm"></label>
                 <input type="email"
-                  class="w-full px-4 leading-8 py-2 text-sm border rounded-md focus:border-indigo-400 focus:outline-none focus:ring-1 focus:ring-blue-600"
+                  class="w-full px-4 leading-8 py-2 text-sm border rounded-md focus:border-bluep-500 focus:outline-none focus:ring-1 focus:ring-bluep-500"
                   placeholder="Last Name" />
               </div>
               <!-- SEGUNDA CAIXA -->
               <div class="mt-4">
                 <label class="block text-sm"></label>
                 <input type="email"
-                  class="w-full px-4 leading-8 py-2 text-sm border rounded-md focus:border-indigo-400 focus:outline-none focus:ring-1 focus:ring-blue-600"
+                  class="w-full px-4 leading-8 py-2 text-sm border rounded-md focus:border-bluep-500 focus:outline-none focus:ring-1 focus:ring-bluep-500"
                   placeholder="Email Adress" />
               </div>
               <!-- TERCEIRA CAIXA -->
             <div>
                 <label class="block  mt-4 text-sm"></label>
                 <input
-                  class="w-full leading-8  px-4 py-2 text-sm border rounded-md focus:border-indigo-400 focus:outline-none focus:ring-1 focus:ring-blue-600"
+                  class="w-full leading-8  px-4 py-2 text-sm border rounded-md border-bluep-500 focus:outline-none focus:ring-1 focus:ring-bluep-500"
                   placeholder="Password" type="password" />
               </div>
               <!-- QUARTA CAIXA -->
               <button
-                class="block font-extrabold uppercase w-full px-8 py-2 mt-4 text-sm leading-8 text-center text-white transition-colors duration-150 bg-greenb-500 border border-transparent rounded-lg active:bg-blue-600 hover:bg-blue-700 focus:outline-none focus:shadow-outline-blue"
+                class="block font-extrabold uppercase w-full px-8 py-2 mt-4 text-sm leading-8 text-center text-white transition-colors duration-150 bg-greenb-500 border border-transparent rounded-lg active:bg-blue-600 hover:bg-green-300 hover:shadow-md focus:outline-none focus:shadow-outline-black"
                 href="#">
                 Claim your free trial 
               </button>
 
                <div class="mt-4 text-center px-8">
                 <p class="text-xs text-gray-600"> By clicking the button, you are agreeing to our <a href="#"
-                    class="text-redp-500 hover:underline"> Terms and Services.</a></p>
-              </div>
+                    class="text-redp-500 font-bold hover:underline"> Terms and Services.</a></p>
               </div>
 
-             
+              </div>
+              
             </div>
           </div>
         </div>
