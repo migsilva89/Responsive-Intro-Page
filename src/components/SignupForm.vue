@@ -42,7 +42,7 @@
                     <!-- SEGUNDA CAIXA -->
                     <div class="mt-4">
                       <label class="block text-sm"></label>
-                      <input type="email"
+                      <input type="text"
                             class="w-full px-4 leading-8 py-2 text-sm border rounded-md focus:border-bluep-500 focus:outline-none focus:ring-1 focus:ring-bluep-500"
                             placeholder="Last Name" />
                     </div>
@@ -55,7 +55,7 @@
                     </div>
                     <!-- PASSWORD FIELD -->
                     <div>
-                      <label class="block  mt-4 text-sm"></label>
+                      <label class="block mt-4 text-sm"></label>
                       <input
                           class="w-full px-4 leading-8 py-2 text-sm border rounded-md focus:border-bluep-500 focus:outline-none focus:ring-1 focus:ring-bluep-500"
                           placeholder="Password" type="password" />
@@ -64,7 +64,7 @@
                     <!-- BUTON -->
                     <div class="submit">
                     <button
-                        class="submit block font-extrabold uppercase w-full px-8 py-2 mt-4 text-sm leading-8 text-center text-white transition-colors duration-150 bg-greenb-500 border border-transparent rounded-lg active:bg-blue-600 hover:bg-green-300 hover:shadow-md focus:outline-none focus:shadow-outline-black">
+                        class="font-extrabold uppercase w-full px-8 py-2 mt-4 text-sm leading-8 text-center text-white transition-colors duration-150 bg-greenb-500 border border-transparent rounded-lg active:bg-blue-600 hover:bg-green-300 hover:shadow-md focus:outline-none focus:shadow-outline-black">
                       Claim your free trial
                     </button>
                     </div>
