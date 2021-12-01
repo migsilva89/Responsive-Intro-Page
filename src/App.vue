@@ -19,7 +19,7 @@
         <div class="max-w-screen-xl flex flex-col md:flex-row mx-auto">
           <!-- PRIMEIRA COLUNA  -->
           <h1 class="text-left md:pt-48 md:pr-28 h-32 md:h-auto md:w-1/2 text-white text-5xl font-black ">
-            Lear to code by watching others.
+            Lear to code by watching others
              <p class="text-left pt-8 md:h-auto text-white text-base font-light">
             See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
             but understanding how developers think is invaluable. 

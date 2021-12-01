@@ -1,0 +1,6 @@
+TASK LIST: 
+
+- add shadows
+- add box color when pressed 
+- check active preview 
+- fix phone version 
