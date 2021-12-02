@@ -16,3 +16,15 @@ VUE.JS
 
 ESTUDAR VI-IF e os @ 
 Zeroicons instal and import 
+
+
+
+
+
+
+
+
+
+
+
+ required v-model="password"
