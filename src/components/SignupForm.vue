@@ -37,13 +37,23 @@
                   <div class="bg-white shadow-xl rounded-lg block w-full px-4 py-2 sm:p-8 mt-4 mb-4">
                     <div>
                       <label class="block text-sm"></label>
-                      <input 
-                          type="text" 
-                          class="w-full px-4 leading-8  py-2 text-sm border rounded-md focus:border-bluep-500 focus:outline-none focus:ring-1 focus:ring-bluep-500"
-                          placeholder="Name" 
-                          :class="{'border-red-500':nameHasErrors}"
-                          @focus="resetFormState"
-                      />
+                      <div class="relative flex">
+                        <input 
+                            type="text" 
+                            class="w-full px-4 leading-8  py-2 text-sm border rounded-md focus:border-bluep-500 focus:outline-none focus:ring-1 focus:ring-bluep-500"
+                            placeholder="Name" 
+                            :class="{
+                              'border-red-500 placeholder-white':nameHasErrors,
+                            }"
+                            @focus="resetFormState"
+                            />
+                            <div
+                              v-if="nameHasErrors"
+                              class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none"
+                            >
+                              <ExclamationCircleIcon class="w-5 h-5 text-redp-500" />
+                          </div>
+                      </div>
                       <p v-if="nameHasErrors" class="italic pt-2 text-redp-500 text-xs text-right">
                         First name cannot be empty 
                       </p>
@@ -51,42 +61,67 @@
 
                     <!-- LAST NAME FIELD -->
                     <div class="mt-4">
-                      <label class="block text-sm"></label>
-                      <input type="text"
-                            class="w-full px-4 leading-8 py-2 text-sm border rounded-md focus:border-bluep-500 focus:outline-none focus:ring-1 focus:ring-bluep-500"
-                            placeholder="Last Name"
-                            :class="{'border-red-500':lastnameHasErrors}"
-                            @focus="resetFormState"
-                      />
+                      <div class="relative flex">
+                        <label class="block text-sm"></label>
+                        <input type="text"
+                              class="w-full px-4 leading-8 py-2 text-sm border rounded-md focus:border-bluep-500 focus:outline-none focus:ring-1 focus:ring-bluep-500"
+                              placeholder="Last Name"
+                              :class="{'border-red-500 placeholder-white':lastnameHasErrors}"
+                              @focus="resetFormState"
+                        />
+                         <div
+                              v-if="lastnameHasErrors"
+                              class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none"
+                            >
+                              <ExclamationCircleIcon class="w-5 h-5 text-redp-500" />
+                          </div>
+                      </div>
                       <p v-if="lastnameHasErrors" class="italic pt-2 text-redp-500 text-xs text-right">
                         Last name cannot be empty 
                       </p>
                     </div>
 
                     <!-- EMAIL FIELD -->
-                    <div class="mt-4">
-                      <label class="block text-sm"></label>
-                      <input type="email"
-                            class="w-full px-4 leading-8 py-2 text-sm border rounded-md focus:border-bluep-500 focus:outline-none focus:ring-1 focus:ring-bluep-500"
-                            placeholder="Email Adress" 
-                            :class="{'border-red-500':emailHasErrors}"
-                            @focus="resetFormState"
-                      />
-                       <p v-if="emailHasErrors" class="italic pt-2 text-redp-500 text-xs text-right">
-                        Email name cannot be empty 
+                      <div class="mt-4">
+                      <div class="relative flex">
+                        <label class="block text-sm"></label>
+                        <input type="text"
+                              class="w-full px-4 leading-8 py-2 text-sm border rounded-md focus:border-bluep-500 focus:outline-none focus:ring-1 focus:ring-bluep-500"
+                              placeholder="example@mail.com"
+                              :class="{'border-red-500 text-md font-extrabold placeholder-redp-500':emailHasErrors}"
+                              @focus="resetFormState"
+                        />
+                         <div
+                              v-if="emailHasErrors"
+                              class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none"
+                            >
+                              <ExclamationCircleIcon class="w-5 h-5 text-redp-500" />
+                          </div>
+                      </div>
+                      <p v-if="emailHasErrors" class="italic pt-2 text-redp-500 text-xs text-right">
+                        Email cannot be empty 
                       </p>
                     </div>
 
                     <!-- PASSWORD FIELD -->
                      <div class="mt-4">
-                      <label class="block text-sm"></label>
-                      <input type="password"
-                            class="w-full px-4 leading-8 py-2 text-sm border rounded-md focus:border-bluep-500 focus:outline-none focus:ring-1 focus:ring-bluep-500"
-                            placeholder="Password"
-                            :class="{'border-red-500':passwordHasErrors}"
-                      />
-                       <p v-if="passwordHasErrors" class="italic pt-2 text-redp-500 text-xs text-right">
-                        Password cannot be empty 
+                      <div class="relative flex">
+                        <label class="block text-sm"></label>
+                        <input type="text"
+                              class="w-full px-4 leading-8 py-2 text-sm border rounded-md focus:border-bluep-500 focus:outline-none focus:ring-1 focus:ring-bluep-500"
+                              placeholder="Password"
+                              :class="{'border-red-500 placeholder-white':passwordHasErrors}"
+                              @focus="resetFormState"
+                        />
+                         <div
+                              v-if="passwordHasErrors"
+                              class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none"
+                            >
+                              <ExclamationCircleIcon class="w-5 h-5 text-redp-500" />
+                          </div>
+                      </div>
+                      <p v-if="passwordHasErrors" class="italic pt-2 text-redp-500 text-xs text-right">
+                        Email cannot be empty 
                       </p>
                     </div>
 
@@ -123,7 +158,14 @@
 
 <script>
 
+import {ExclamationCircleIcon} from "@heroicons/vue/solid";
+
 export default {
+  
+  components: {
+       ExclamationCircleIcon,
+  },
+
   data() {
     return{
       email: '',
@@ -137,7 +179,7 @@ export default {
 
   methods:{
     validateForm(){
-      // console.log("nikus boi")
+      //pedido Ajax para enviar a data do form e caso tenha erros:
       this.nameHasErrors=true
       this.lastnameHasErrors=true
       this.emailHasErrors=true
@@ -149,7 +191,6 @@ export default {
       this.emailHasErrors=false
       this.passwordHasErrors=false
     }
-
   }
 }
 
