@@ -11,7 +11,8 @@
   </head>
 
   <body>
-    <form>
+    <!-- previne de enviar a form em caso de x -->
+    <form @submit.prevent="validateForm">
       <!-- BANNER -->
       <div style="background-image: url(images/images/bg-intro-desktop.png)" class="bg-redp-500">
         <div class="flex items-center min-h-screen " >
@@ -32,7 +33,7 @@
                     Try it free 7 days <span class="font-thin">then $20/mo. thereafter</span>
                   </h1>
 
-                  <!-- PRIMEIRA CAIXA -->
+                  <!-- NAME FIELD -->
                   <div class="bg-white shadow-xl rounded-lg block w-full px-4 py-2 sm:p-8 mt-4 mb-4">
                     <div>
                       <label class="block text-sm"></label>
@@ -48,31 +49,48 @@
                       </p>
                     </div>
 
-                    <!-- SEGUNDA CAIXA -->
+                    <!-- LAST NAME FIELD -->
                     <div class="mt-4">
                       <label class="block text-sm"></label>
                       <input type="text"
                             class="w-full px-4 leading-8 py-2 text-sm border rounded-md focus:border-bluep-500 focus:outline-none focus:ring-1 focus:ring-bluep-500"
-                            placeholder="Last Name" />
+                            placeholder="Last Name"
+                            :class="{'border-red-500':lastnameHasErrors}"
+                            @focus="resetFormState"
+                      />
+                      <p v-if="lastnameHasErrors" class="text-red-500">
+                        Fill your last name bitch! 
+                      </p>
                     </div>
 
                     <!-- EMAIL FIELD -->
                     <div class="mt-4">
                       <label class="block text-sm"></label>
-                      <input type="email" required v-model="email"
+                      <input type="email"
                             class="w-full px-4 leading-8 py-2 text-sm border rounded-md focus:border-bluep-500 focus:outline-none focus:ring-1 focus:ring-bluep-500"
-                            placeholder="Email Adress" />
+                            placeholder="Email Adress" 
+                            :class="{'border-red-500':emailHasErrors}"
+                            @focus="resetFormState"
+                      />
+                       <p v-if="emailHasErrors" class="text-red-500">
+                        Fill your email bitch! 
+                      </p>
                     </div>
 
                     <!-- PASSWORD FIELD -->
                      <div class="mt-4">
                       <label class="block text-sm"></label>
-                      <input type="password" required v-model="password"
+                      <input type="password"
                             class="w-full px-4 leading-8 py-2 text-sm border rounded-md focus:border-bluep-500 focus:outline-none focus:ring-1 focus:ring-bluep-500"
-                            placeholder="Password" />
+                            placeholder="Password"
+                            :class="{'border-red-500':passwordHasErrors}"
+                      />
+                       <p v-if="passwordHasErrors" class="text-red-500">
+                        Fill your password bitch! 
+                      </p>
                     </div>
 
-                    <!-- BUTON -->
+                    <!-- BUTTON -->
                     
                     <div class="submit">
                     <button 
@@ -104,25 +122,37 @@
 </template>
 
 <script>
+
 export default {
   data() {
     return{
       email: '',
       password: '',
-      nameHasErrors: false 
+      nameHasErrors: '',
+      lastnameHasErrors: '',
+      emailHasErrors: '',
+      passowrdHasErrors: ''
     }
   },
+
   methods:{
     validateForm(){
       // console.log("nikus boi")
       this.nameHasErrors=true
+      this.lastnameHasErrors=true
+      this.emailHasErrors=true
+      this.passwordHasErrors=true
     },
     resetFormState(){
       this.nameHasErrors=false
+      this.lastnameHasErrors=false
+      this.emailHasErrors=false
+      this.passwordHasErrors=false
     }
 
   }
 }
+
 </script>
 
 <style>
