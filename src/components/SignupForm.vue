@@ -44,8 +44,8 @@
                           :class="{'border-red-500':nameHasErrors}"
                           @focus="resetFormState"
                       />
-                      <p v-if="nameHasErrors" class="text-red-500">
-                        Fill your name bitch! 
+                      <p v-if="nameHasErrors" class="italic pt-2 text-redp-500 text-xs text-right">
+                        First name cannot be empty 
                       </p>
                     </div>
 
@@ -58,8 +58,8 @@
                             :class="{'border-red-500':lastnameHasErrors}"
                             @focus="resetFormState"
                       />
-                      <p v-if="lastnameHasErrors" class="text-red-500">
-                        Fill your last name bitch! 
+                      <p v-if="lastnameHasErrors" class="italic pt-2 text-redp-500 text-xs text-right">
+                        Last name cannot be empty 
                       </p>
                     </div>
 
@@ -72,8 +72,8 @@
                             :class="{'border-red-500':emailHasErrors}"
                             @focus="resetFormState"
                       />
-                       <p v-if="emailHasErrors" class="text-red-500">
-                        Fill your email bitch! 
+                       <p v-if="emailHasErrors" class="italic pt-2 text-redp-500 text-xs text-right">
+                        Email name cannot be empty 
                       </p>
                     </div>
 
@@ -85,8 +85,8 @@
                             placeholder="Password"
                             :class="{'border-red-500':passwordHasErrors}"
                       />
-                       <p v-if="passwordHasErrors" class="text-red-500">
-                        Fill your password bitch! 
+                       <p v-if="passwordHasErrors" class="italic pt-2 text-redp-500 text-xs text-right">
+                        Password cannot be empty 
                       </p>
                     </div>
 
@@ -102,8 +102,8 @@
 
                     <!-- TERMS AND CONDITIONS -->
                     <div class="mt-4 text-center px-8">
-                      <p class="text-xs text-gray-600"> By clicking the button, you are agreeing to our 
-                        <a href="#" class="text-redp-500 font-bold hover:underline"> Terms and Services.</a>
+                      <p class="text-xs text-gray-400"> By clicking the button, you are agreeing to our 
+                        <a href="#" class="text-redp-500 font-normal hover:underline"> Terms and Services.</a>
                         </p>
                     </div>
                       <!-- <p>Email: {{ email }}</p>
