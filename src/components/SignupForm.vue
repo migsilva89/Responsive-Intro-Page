@@ -31,14 +31,23 @@
                   <h1 class="bg-bluep-500 shadow-xl rounded-lg block w-full px-4 py-4 mt-4 mb-4 text-base font-black text-center text-white">
                     Try it free 7 days <span class="font-thin">then $20/mo. thereafter</span>
                   </h1>
+
                   <!-- PRIMEIRA CAIXA -->
                   <div class="bg-white shadow-xl rounded-lg block w-full px-4 py-2 sm:p-8 mt-4 mb-4">
                     <div>
                       <label class="block text-sm"></label>
-                      <input type="text"
-                            class="w-full px-4 leading-8  py-2 text-sm border rounded-md focus:border-bluep-500 focus:outline-none focus:ring-1 focus:ring-bluep-500"
-                            placeholder="Name" />
+                      <input 
+                          type="text" 
+                          class="w-full px-4 leading-8  py-2 text-sm border rounded-md focus:border-bluep-500 focus:outline-none focus:ring-1 focus:ring-bluep-500"
+                          placeholder="Name" 
+                          :class="{'border-red-500':nameHasErrors}"
+                          @focus="resetFormState"
+                      />
+                      <p v-if="nameHasErrors" class="text-red-500">
+                        Fill your name bitch! 
+                      </p>
                     </div>
+
                     <!-- SEGUNDA CAIXA -->
                     <div class="mt-4">
                       <label class="block text-sm"></label>
@@ -46,6 +55,7 @@
                             class="w-full px-4 leading-8 py-2 text-sm border rounded-md focus:border-bluep-500 focus:outline-none focus:ring-1 focus:ring-bluep-500"
                             placeholder="Last Name" />
                     </div>
+
                     <!-- EMAIL FIELD -->
                     <div class="mt-4">
                       <label class="block text-sm"></label>
@@ -53,19 +63,22 @@
                             class="w-full px-4 leading-8 py-2 text-sm border rounded-md focus:border-bluep-500 focus:outline-none focus:ring-1 focus:ring-bluep-500"
                             placeholder="Email Adress" />
                     </div>
+
                     <!-- PASSWORD FIELD -->
-                    <div>
-                      <label class="block mt-4 text-sm"></label>
-                      <input
-                          class="w-full px-4 leading-8 py-2 text-sm border rounded-md focus:border-bluep-500 focus:outline-none focus:ring-1 focus:ring-bluep-500"
-                          placeholder="Password" type="password" />
+                     <div class="mt-4">
+                      <label class="block text-sm"></label>
+                      <input type="password" required v-model="password"
+                            class="w-full px-4 leading-8 py-2 text-sm border rounded-md focus:border-bluep-500 focus:outline-none focus:ring-1 focus:ring-bluep-500"
+                            placeholder="Password" />
                     </div>
 
                     <!-- BUTON -->
+                    
                     <div class="submit">
-                    <button
+                    <button 
+                        @click="validateForm"
                         class="font-extrabold uppercase w-full px-8 py-2 mt-4 text-sm leading-8 text-center text-white transition-colors duration-150 bg-greenb-500 border border-transparent rounded-lg active:bg-blue-600 hover:bg-green-300 hover:shadow-md focus:outline-none focus:shadow-outline-black">
-                      Claim your free trial
+                        Claim your free trial
                     </button>
                     </div>
 
@@ -95,8 +108,19 @@ export default {
   data() {
     return{
       email: '',
-      password: ''
+      password: '',
+      nameHasErrors: false 
     }
+  },
+  methods:{
+    validateForm(){
+      // console.log("nikus boi")
+      this.nameHasErrors=true
+    },
+    resetFormState(){
+      this.nameHasErrors=false
+    }
+
   }
 }
 </script>

@@ -2,11 +2,17 @@ TASK LIST:
 
 - add shadows - done 
 - add box color when pressed - done
-- check active preview 
-- fix phone version 
+- check active preview - IN PROGRESS...
+- fix phone version - 
 
 
 
 git add --all
 git commit -m "intro-form"
 git push u- origin main
+
+
+VUE.JS
+
+ESTUDAR VI-IF e os @ 
+Zeroicons instal and import 
