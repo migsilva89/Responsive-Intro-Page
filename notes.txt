@@ -2,8 +2,8 @@ TASK LIST:
 
 - add shadows - done 
 - add box color when pressed - done
-- check active preview - IN PROGRESS...
-- fix phone version - 
+- check active preview - Done
+- fix phone version - In progress...
 
 
 
