@@ -1,6 +1,11 @@
 # Vue 3 + Vite + Tailwindcss first time.
+## Sign form with active state.
 
-Sign form with active state.
+## Normal sate
+![alt text](./public/image1.png)
+
+## Active state
+![alt text](./public/imagem2.png)
 
 Design and requests provided by: https://www.frontendmentor.io/ 
 
