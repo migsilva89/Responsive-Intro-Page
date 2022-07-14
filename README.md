@@ -7,7 +7,7 @@
 ## Active state
 ![alt text](./public/imagem2.png)
 
-Design and requests provided by: https://www.frontendmentor.io/ 
+Challenge from: https://www.frontendmentor.io/ 
 
 ## Installation
 
@@ -23,4 +23,4 @@ Tailwind CSS: https://tailwindcss.com/
 
 Vue3: https://vuejs.org/
 
-Feel free to use it. 
+Live: https://intro-form-flame.vercel.app/
